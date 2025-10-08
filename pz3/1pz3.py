@@ -8,10 +8,12 @@ except ValueError:
     print("Ошибка: введите целое число!")
     exit()
 
-digits = [int(d) for d in str(num)]
+a = num // 100
+b = (num // 10) % 10
+c = num % 10
 
-is_ascending = digits[0] < digits[1] < digits[2]
-is_descending = digits[0] > digits[1] > digits[2]
+is_ascending = a < b and b < c
+is_descending = a > b and b > c
 
 if is_ascending or is_descending:
     print("Истинно: цифры образуют возрастающую или убывающую последовательность.")
