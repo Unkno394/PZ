@@ -22,7 +22,7 @@ def main():
             x, y = x_coords[i], y_coords[i]
         
             if (x > 0 and y > 0) or (x < 0 and y < 0):
-                distance = math.sqrt(x**2 + y**2)
+                distance = math.sqrt(x**2 + y**2)  # R = √(x² + y²)
                 
                 if distance < min_distance:
                     min_distance = distance
@@ -46,3 +46,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+    
